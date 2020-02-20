@@ -7,17 +7,52 @@ and OpenBSD as the best email server for the internet
 
 === About OpenBSD
 
+OpenBSD is an operating system derived from Unix.
+
 === The Internet as a Threat Landscape
+
+=== OpenBSD as the best Server Platform for a hostile Internet
 
 === Internet Email
 
 In which we talk about MTA, MUA and "other"
 
-=== OpenBSD as the best email server for the internet
-
-Why we think it's best
-
 === The Best Email Software for OpenBSD
 
 There are a dozen MTAs available in open source for Unix.
-OpenSMTPD (also called `smtpd`)
+OpenSMTP (also called `smtpd`) is the one that ships
+as the default mailer on OpenBSD, so it's the one we use and write about.
+OpenSMTP was developed because the code base of `sendmail`
+was almost too large to comprehend, let alone to consider secure.
+Its configuration syntax was also almost impossible to comprehend.
+Gilles bravely set out to build a working replacement that would
+be small, secure, self-contained, and standards-conforming - the four esses
+for essential software.
+
+If you have normal desktop users accessing your email server,
+you are going to need a way for them to send and receive emails,
+using an email client like Thunderbird.
+That client will usually download email messages to the 
+desktop computer via a network protocol like IMAP
+or the older POP.
+We'll use a popular mail downloader called DoveCot for this.
+Dovecot is not included with OpenBSD but can be installed
+trivially from the ports/packages system.
+
+You may also want to have some users that access their email
+via a web interface, so we'll cover using XXX for this purpose.
+
+== About This Book
+
+Some years ago Ian started to build a video-based course on 
+OpenBSD administration. That project failed to thrive,
+so Wesley suggested a book instead, and this work was born.
+
+We developed it in the open, on github, from where you can
+examine the input documents.
+If you find a mistake, you can even "fork the repository and
+send us a pull request", if you know what that means.
+
+== Acknowledgements
+
+The section on Dovecot was previously published by Ian on medium.com.
