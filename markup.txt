@@ -1,0 +1,3 @@
+Commands		in back-tics	`ls -l`
+Files			in _			_/etc/mail/smtpd.conf_
+Config			in +			The +alias+ keyword is used...

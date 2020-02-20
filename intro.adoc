@@ -1,0 +1,23 @@
+== Introduction: 
+
+In this book we talk about
+OpenBSD, The Internet as a Threat Landscape, Email,
+and OpenBSD as the best email server for the internet
+(and the best email server software for OpenBSD).
+
+=== About OpenBSD
+
+=== The Internet as a Threat Landscape
+
+=== Internet Email
+
+In which we talk about MTA, MUA and "other"
+
+=== OpenBSD as the best email server for the internet
+
+Why we think it's best
+
+=== The Best Email Software for OpenBSD
+
+There are a dozen MTAs available in open source for Unix.
+OpenSMTPD (also called `smtpd`)

@@ -1,0 +1,1 @@
+== OpenSMTP as MTA (Mail Transfer Agent)
