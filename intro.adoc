@@ -55,4 +55,4 @@ send us a pull request", if you know what that means.
 
 == Acknowledgements
 
-The section on Dovecot was previously published by Ian on medium.com.
+The section on Dovecot was previously published by Ian on blog.learningtree.com
