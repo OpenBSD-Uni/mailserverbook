@@ -1,1 +1,83 @@
 == Dovecot MDA (Mail Delivery Agent)
+
+.How I Got to Dovecot: Ian's Story
+****
+I run a small server for our own use, with half a dozen users. The operating
+system is OpenBSD, which ships with its own MDA, `smtpd`. OpenSMTP fits our
+“small enough for one developer to code review” rather better than the
+larger sendmail and postfix packages. For some years I ran a variety of POP
+and IMAP servers to support various MUA mail clients. After a while I
+consolidated a bit: the last POP user switched over to IMAP. Most
+non-sysadmin users won’t care what you use as long as it works.
+Concentrating on one protocol simplifies things.
+
+At the time I had installed two IMAP packages, Courier-Imap and UW-Imap,
+though obviously only one was in use at a time. Both suffer from
+over-engineering, complex configuration, multiple packages needed for
+authentication/encryption, and strange messages.
+
+It was one of those strange messages that got me to look around for other software.
+
+Feb 21 21:07:16 darwinsys imapd[1810]: Autologout user=david@androidcookbook.com host=static-ip-cr18163255231.cable.net.co [181.63.255.231]
+
+Was I hacked? No On the same server machine I run several websites,
+including androidcookbook.com, the support and contribution site for
+O’Reilly’s Android Cookbook. The web server there is written using the Java
+Enterprise tools that we cover in Learning Tree Course 936.
+
+And _there is no user named david_.
+
+So perhaps hackers had found a way to login to my IMAP server (unlikely).
+Or, the server was reporting “logout” for people that had started but not
+completed a login (more likely). At that point, late at night, I didn’t care
+which. I shut down all IMAP support for the night, posted a message to
+anyone using the system (nobody was), and went to bed.
+
+Next morning I went looking for a replacement.
+A Google search on “Courier UW-Imap” led me to a three-way comparison that
+included Dovecot, and the chase was on! Somehow I had previously gotten the
+impression that Dovecot was a MUA instead of an IMAP server. I installed
+Dovecot on my backup server, and started configuring it. All that the
+installation process takes on OpenBSD is a command like `doas pkg_add dovecot`.
+The configuration is actually fairly simple, though you have to tailor things a
+bit. The configuration consists of a dozen small files in a subdirectory
+(/etc/dovecot/conf.d). You can include into or exclude these into the “main”
+control file, /etc/dovecot/dovecot.conf. There’s even a tool that reminds
+you of all the changes you’ve made, doveconf.
+
+About an hour in I had a working configuration, so I cloned that onto the
+production server, installed the dovecot package there too, started it up,
+and kept an eye on the logs. Like most IMAP servers, Dovecot normally
+listens on both TCP port 143 for non-SSL-encrypted connections, and port 993
+for SSL’d IMAP. The only minor hitch is that I didn’t yet find a way to stop
+it listening on the non-SSL port, but that’s easy to block with the `pf`
+firewall. Sure enough, users were downloading mail via IMAP with no change
+to their desktop or mobile configuration. And, now I was getting decent
+“rejection” messages for the hackers who try to login, such as this one:
+
+Feb 22 13:37:45 darwinsys dovecot: imap-login: Aborted login (auth failed, 1 attempts in 2 secs): user=<office@androidcookbook.com>, method=PLAIN, rip=83.218.109.4, lip=69.172.254.175, TLS, session=<yLopeOSCL4dT2m0E>
+
+There’s no “office” account here either, but at least now I get correct messages.
+
+And I have a simpler configuration. There’s only one installed package
+(dovecot) to update to keep my IMAP software simple, sane and secure. Since
+the OpenBSD system has good package management tools, that part’s easy too.
+And that’s how Dovecot became my new best friend of email software.
+****
+
+=== History of Dovecot
+
+XXX
+
+=== Brief Look at Other Tools
+
+XXX
+
+=== Configuration
+
+XXX
+
+=== Security
+
+XXX
+

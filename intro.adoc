@@ -8,14 +8,37 @@ and OpenBSD as the best email server for the internet
 === About OpenBSD
 
 OpenBSD is an operating system derived from Unix.
+"Open" has been around for two decades, after splitting off from another BSD project.
+BSD in turn is Berkeley Software Distribution or "Berkeley Unix", UC
+Berkeley's expanded (but now discontinued) version of the One True Unix
+developed at AT&T Bell Labs Research Center going all the way back to 1970.
 
 === The Internet as a Threat Landscape
 
+The Internet was developed over many years, starting with the ARPAnet which connected
+a few university and military sites. As it was originated in an open environment but
+with access limited to known researchers,
+security was not a primary consideration.
+At the same time, desktop computing evolved in a commercial, "Buy Windows for $100" scheme
+which, again, was not as security-focused as it should have been.
+Ever since then we have been playing catch-up on security.
+
+XXX
+
 === OpenBSD as the best Server Platform for a hostile Internet
+
+OpenBSD's motto is "A secure OS for an insecure internet".
+The project focuses on security via several points:
+
+* code correctness as a way of providing security.
+* design security in from the start
+* integrate security features into the kernel
+
+XXX
 
 === Internet Email
 
-As you may know, there are two kinds of email systems: Microsoft Outlook, and
+As you probably know, there are two kinds of email systems: Microsoft Outlook, and
 everything else. The non-Outlook-based email world consists mainly of three
 kinds of software: MTAs, MUAs, and anti-spam/antivirus. 
 
@@ -70,8 +93,8 @@ We'll use a popular mail downloader called DoveCot for this.
 Dovecot is not included with OpenBSD but can be installed
 trivially from the ports/packages system.
 
-You may also want to have some users that access their email
-via a web interface, so we'll cover using XXX for this purpose.
+You may also have some users that want to access their email
+via a web interface, so we'll cover one way of serving email via the web.
 
 === About This Book
 
