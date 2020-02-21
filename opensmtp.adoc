@@ -1,1 +1,15 @@
 == OpenSMTP as MTA (Mail Transfer Agent)
+
+=== History
+
+=== Basic Configuration
+
+=== TLS Certificates
+
+=== User Certificates
+
+=== SPAM Filtering
+
+OpenBSD spamd
+
+rspamd
