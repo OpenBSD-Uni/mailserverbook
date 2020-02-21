@@ -19,7 +19,7 @@ As you may know, there are two kinds of email systems: Microsoft Outlook, and
 everything else. The non-Outlook-based email world consists mainly of three
 kinds of software: MTAs, MUAs, and anti-spam/antivirus. 
 
-XXX Image
+image::images/dovecot-email-flow.png[]
 
 MTAs (Mail Transfer Agents, also called MDAs or Mail Delivery Agents)
 are the programs that transmit and receive email to/from other servers
@@ -73,7 +73,7 @@ trivially from the ports/packages system.
 You may also want to have some users that access their email
 via a web interface, so we'll cover using XXX for this purpose.
 
-== About This Book
+=== About This Book
 
 Some years ago Ian started to build a video-based course on 
 OpenBSD administration. That project failed to thrive,
@@ -84,8 +84,9 @@ examine the input documents.
 If you find a mistake, you can even "fork the repository and
 send us a pull request", if you know what that means.
 
-== Acknowledgements
+=== Acknowledgements
 
-The section on Dovecot was previously published by Ian on 
-
-kwwblog.learningtree.com
+The sections on mail software types and some of the material
+in the Dovecot chapter was previously published by Ian on 
+https://blog.learningtree.com/dovecot-now-favorite-unix-linux-imap-mail-download-server[blog.learningtree.com].
+and is used with permission.
