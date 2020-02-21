@@ -19,7 +19,7 @@ As you may know, there are two kinds of email systems: Microsoft Outlook, and
 everything else. The non-Outlook-based email world consists mainly of three
 kinds of software: MTAs, MUAs, and anti-spam/antivirus. 
 
-image::images/dovecot-email-flow.png[]
+image::images/dovecot-email-flow.svg[]
 
 MTAs (Mail Transfer Agents, also called MDAs or Mail Delivery Agents)
 are the programs that transmit and receive email to/from other servers
