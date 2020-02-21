@@ -1,1 +1,13 @@
 == Appendix: CLI (Command Line Interface) to manage your system
+
+Most experienced Unix/Linux administrators begin as users of such systems,
+and wind up with considerable experience using the command-line tools.
+This appendix is a brief "survival guide" for somebody with no such experience.
+
+=== About the CLI
+
+=== Basics of Interaction
+
+=== The first 10 commands
+
+=== The Second 10 commands
