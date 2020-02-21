@@ -38,7 +38,8 @@ program that can get it there.
 
 MUA::
 Mail User Agent.
-The program end users read their email with. Examples: Thunderbird, ...
+The program with which end users compose and send new messages, and read incoming email.
+Examples: Thunderbird, ...
 
 MX::
 Mail Exchanger.
