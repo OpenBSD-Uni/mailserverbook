@@ -2,3 +2,6 @@ FILES	= book.adoc intro.adoc protecting.adoc opensmtp.adoc dovecot.adoc glossary
 
 book.html: $(FILES)
 	asciidoctor book.adoc
+
+clean:
+	@rm -f *.html *.pdf
