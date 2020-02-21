@@ -1,46 +1,71 @@
 == Glossary of Terms
 
-DNS::Domain Name Service.
+DNS::
+Domain Name Service.
 The protocol through which computers map between user-friendly computer names ("domain names"
 or "host names") and their physical ("IP") addresses.
 
-IMAP::Internet Mail Access Protocol.
+DoS, DDOS::
+Denial of Service or Distributed denial of service.
+A form of attack in which a bad actor tries to prevent legitimate users from accessing
+a computer system by overloading it; DDOS involves sending the overload data from
+a variety of compromised computers around the internet.
+
+ESMTP::
+Extended SMTP.
+
+IMAP::
+Internet Mail Access Protocol.
 The communications language used by an MUA to download your mail to your desktop mail reader.
 
-IP::Internet Protocol.
+IP::
+Internet Protocol.
 The part of the internet software that looks after getting packets of data from one
 computer to another, often via intermediate computing devices.
 
-MDA::Mail Delivery Agent.
+MDA::
+Mail Delivery Agent.
 The back-end of an MTA that actually stores the mail into a file. May be a separate program with some name like `localmail` or may be integrated into the MTA.
 
-MTA::Mail (or Message) Transfer (or Transport) Agent.
+MSA::
+https://en.wikipedia.org/wiki/Message_submission_agent[Mail Submission Agent].
+
+MTA::
+https://en.wikipedia.org/wiki/Message_transfer_agent[Mail (or Message)
+	Transfer (or Transport) Agent].
 The program that sorts out where to send mail and delivers it there, or to another
 program that can get it there.
 
-MUA::Mail User Agent.
+MUA::
+Mail User Agent.
 The program end users read their email with. Examples: Thunderbird, ...
 
-MX::Mail Exchanger.
+MX::
+Mail Exchanger.
 MX is both a generic term for software that exchanges mail, and a type of DNS record
-identifying multiple servers to which you can send email on behalf of a given domain name.
+identifying multiple servers to which you can send email for delivery to a given domain name.
 
-POP::Post Office Protocol.
+POP::
+Post Office Protocol.
 An older download protocol, less-sophisticated than IMAP.
 Exists in two different versions, POP2 and POP3.
 
-SMTP::Simple Mail Transfer Prottocol
+SMTP::
+Simple Mail Transfer Protocol.
 The communication language used by most MDAs to transfer email messages around the Internet.
 
-TCP::Transport Control Protocol.
+TCP::
+Transport Control Protocol.
 The level above IP that provides for streaming connections.
 Most internet services use TCP, including the Web, email, and streaming media.
 
-TLS::Transport Layer Security.
+TLS::
+Transport Layer Security.
 TLS is the mechanism for encrypting data being sent over a network socket.
 TLS replaces the older SSL.
 Familiar to Web users by use of +https+ (encrypted) vs +http+ (unencrypted).
 
-UDP::User Datagram Protocol.
+UDP::
+User Datagram Protocol.
 A layer above IP that sends individual packets.
 The difference between UDP and TCP has been compared to sending postcards vs calling the person by phone.
