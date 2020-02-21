@@ -15,14 +15,45 @@ OpenBSD is an operating system derived from Unix.
 
 === Internet Email
 
-In which we talk about MTA, MUA and "other"
+As you may know, there are two kinds of email systems: Microsoft Outlook, and
+everything else. The non-Outlook-based email world consists mainly of three
+kinds of software: MTAs, MUAs, and anti-spam/antivirus. 
+
+XXX Image
+
+MTAs (Mail Transfer Agents, also called MDAs or Mail Delivery Agents)
+are the programs that transmit and receive email to/from other servers
+on the Internet. Common examples include SendMail, PostFix, OpenSMTP, and
+more. An MTA normally speaks SMTP (the "Simple Mail Transfer Protocol") and
+is in charge of sending mail out to the internet, receiving incoming emails
+from other MTAs elsewhere on the internet, and saving incoming messages to
+disk or otherwise making them available so you can read them.
+
+MUAs are the Mail User Agents, which usually run on end-user systems
+(desktops, mobile) and use either IMAP ("Internet Mail Access Protocol") or
+the older Post Office Protocol (POP) to download messages, from a server
+where the MDA has stored them, to the desktop or mobile device where you
+read them. MUAs also handle composing emails and sending them up to the mail
+server. Well-known desktop MUAs include Thunderbird and Apple Mail; on
+Android, GMail and K9 Mail. Web-based MUAs - such as SquirrelMail - either
+provide, or run in,  a web server, usually on the same machine as the MDA.
+The original GMail works this way, and Outlook has a web face as well.
+
+The third group, anti-spam and anti-virus software, is similar to desktop
+anti-virus software, but aimed at cooperating with the MUAs or MDAs, or
+both. These aim to prevent malicious messages from wasting your time and
+computing resources.
+
+We'll cover one MTA - Dovecot - in detail in this book.
+We'll assume your users either have an MUA such as Thunderbird,
+or that they want to use a web-based email client.
 
 === The Best Email Software for OpenBSD
 
 There are a dozen MTAs available in open source for Unix.
 OpenSMTP (also called `smtpd`) is the one that ships
 as the default mailer on OpenBSD, so it's the one we use and write about.
-OpenSMTP was developed because the code base of `sendmail`
+OpenSMTP was developed because the code base of the popular `sendmail`
 was almost too large to comprehend, let alone to consider secure.
 Its configuration syntax was also almost impossible to comprehend.
 Gilles bravely set out to build a working replacement that would
@@ -55,4 +86,6 @@ send us a pull request", if you know what that means.
 
 == Acknowledgements
 
-The section on Dovecot was previously published by Ian on blog.learningtree.com
+The section on Dovecot was previously published by Ian on 
+
+kwwblog.learningtree.com
