@@ -3,7 +3,7 @@
 .How I Got to Dovecot: Ian's Story
 ****
 I run a small server for our own use, with half a dozen users. The operating
-system is OpenBSD, which ships with its own MDA, `smtpd`. OpenSMTP fits our
+system is OpenBSD, which ships with its own MDA, `smtpd`. OpenSMTPD fits our
 “small enough for one developer to code review” rather better than the
 larger sendmail and postfix packages. For some years I ran a variety of POP
 and IMAP servers to support various MUA mail clients. After a while I

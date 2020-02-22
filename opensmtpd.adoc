@@ -1,4 +1,4 @@
-== OpenSMTP as MTA (Mail Transfer Agent)
+== OpenSMTPD as MTA (Mail Transfer Agent)
 
 === History
 

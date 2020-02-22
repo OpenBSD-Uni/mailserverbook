@@ -46,7 +46,7 @@ image::images/dovecot-email-flow.svg[]
 
 MTAs (Mail Transfer Agents, also called MDAs or Mail Delivery Agents)
 are the programs that transmit and receive email to/from other servers
-on the Internet. Common examples include SendMail, PostFix, OpenSMTP, and
+on the Internet. Common examples include SendMail, PostFix, OpenSMTPD, and
 more. An MTA normally speaks SMTP (the "Simple Mail Transfer Protocol") and
 is in charge of sending mail out to the internet, receiving incoming emails
 from other MTAs elsewhere on the internet, and saving incoming messages to
@@ -74,9 +74,9 @@ or that they want to use a web-based email client.
 === The Best Email Software for OpenBSD
 
 There are a dozen MTAs available in open source for Unix.
-OpenSMTP (also called `smtpd`) is the one that ships
+OpenSMTPD (also called `smtpd`) is the one that ships
 as the default mailer on OpenBSD, so it's the one we use and write about.
-OpenSMTP was developed because the code base of the popular `sendmail`
+OpenSMTPD was developed because the code base of the popular `sendmail`
 was almost too large to comprehend, let alone to consider secure.
 Its configuration syntax was also almost impossible to comprehend.
 Gilles bravely set out to build a working replacement that would
