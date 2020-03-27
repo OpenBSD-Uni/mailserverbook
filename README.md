@@ -1,5 +1,5 @@
 # mailserverbook
-Notes on setting up OpenBSD as an Email server
+Notes on setting up OpenBSD as an Email server following the KISS principle.
 
 ## Features: What are we going to build exactly ?
 
@@ -11,6 +11,9 @@ Notes on setting up OpenBSD as an Email server
 - CLI (Command Line Interface) to manage the box
 - Multiple domains hosting
 - DKIM sign outgoing mail
+- A webmail with Let's Encrypt certificate
+- Easy vacation message setup
+- Maildir E-mail format
 
 ## Prerequisites
 
