@@ -1,4 +1,4 @@
-# mailserverbook
+# mailserverbook 📕
 Notes on setting up OpenBSD as an Email server following the KISS principle.
 
 ## Features: What are we going to build exactly ?
