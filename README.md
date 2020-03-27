@@ -6,6 +6,7 @@ Notes on setting up OpenBSD as an Email server following the KISS principle.
 - PF (Packet Filter) will protect the box
 - OpenSMTPD as MTA (Mail Transfer Agent)
 - Dovecot MDA (Mail Delivery Agent)
+- Spam fighting mechanism (Spamd/spf walk)
 - Chroot environment
 - System user accounts usage
 - CLI (Command Line Interface) to manage the box
