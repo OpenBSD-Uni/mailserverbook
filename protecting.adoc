@@ -1,5 +1,28 @@
 == Protecting Your Server
 
 === Using PF (Packet Filter) to protect your server
+
+./etc/pf.conf
+----
+set skip on lo
+set block-policy return
+
+pass out
+block in log
+pass in inet proto tcp from any to any \
+        port { ssh smtp smtps submission pop pop3s imap imaps www https  }
+pass in inet proto icmp from any to any icmp-type echoreq
+----
+
+.Load the PF ruleset
+----
+pfctl -f /etc/pf.conf
+----
+
+.Debug, what is blocking ?
+----
+tcpdump -nettti pflog0
+----
+
 === Setting up a chroot environment
 === System user accounts usage
