@@ -1,5 +1,6 @@
 # mailserverbook 📕
 Notes on setting up OpenBSD as an Email server following the KISS principle.
+You will get best practices from Ian F. Darwin, an OpenBSD developer since 1998.
 
 ## Features: What are we going to build exactly ?
 
