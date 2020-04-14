@@ -1,5 +1,5 @@
 = The OpenBSD Mail Server Book
-:author: Ian Darwin and Wesley Mouedine
+:author: Ian Darwin and Wesley Mouedine Assaby
 :toc:
 
 include::intro.adoc[]
