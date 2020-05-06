@@ -12,4 +12,50 @@ This appendix is a brief "survival guide" for somebody with no such experience.
 
 === The Second 10 commands
 
+=== Minimal System Maintenance
+
+==== Stable Branch
+
+Stable Branch users should subscribe to the announce list and
+watch for announcements of either security patches or new releases.
+
+For security or other patches:
+
+	$ doas syspatch
+
+About every 6 months when a new release is announced:
+
+* $ doas sysupgrade # this will cause two reboots; wait for it.
+
+* $ doas pkg_add -u # upgrade all packages
+
+* Run sysclean as described below.
+
+==== Current Branch
+
+Every few days or weeks:
+
+* $ doas sysupgrade
+
+* $ doas pkg_add -u
+
+* Run sysclean as described below.
+
+==== Sysclean
+
+Sysclean generates a list of files that are candidates for removal.
+Its algorithm just compares known files, along with a user-specifiable list of
+knwon files in /etc/sysclean.ignore. It's good at finding files that are no
+longer part of OpenBSD, but it also reports a lot of local files (until you add
+them to the ignore file), so it never actually removes files, just generates a list of them.
+
+* $ doas sysclean > aTempFile
+
+* Edit the file aTempFile; any files that you want to keep should be removed from the file,
+and probably added to /etc/sysclean.ignore
+
+* When you are good and sure the list of files in aTempFile is safe to remove:
+
+	$ doas rm -r $(cat aTempFile)
+
 === For More Information
