@@ -10,24 +10,24 @@ This appendix is a brief "survival guide" for somebody with no such experience.
 
 === The first 10 commands
 
-login
-ls
-mv/cp
-rm, rmdir
-An editor!
-chmod
-Grep family & friends
-sh/ksh, bash
+* login
+* ls
+* mv/cp
+* rm, rmdir
+* An editor!
+* chmod
+* Grep family & friends
+* sh/ksh, bash
 
 === Pipes and Redirection
 
 === The Second 10 commands
 
-find, locate
-mount
-df
-rcctl
-pkg_add & company
+* find, locate
+* mount
+* df
+* rcctl
+* pkg_add & company
 
 Using the FAQ
 
