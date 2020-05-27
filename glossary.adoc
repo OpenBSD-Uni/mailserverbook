@@ -1,5 +1,13 @@
 == Glossary of Terms
 
+DKIM::
+DomainKeys Identified Mail.
+A DNS record designed to help ISPs prevent malicious email senders by validating email from specific domains.
+
+DMARC::
+Domain-based Message Authentication, Reporting and Conformance.
+A DNS record that provides reports and instructs receivers about what to do with passed or failed messages.
+
 DNS::
 Domain Name Service.
 The protocol through which computers map between user-friendly computer names ("domain names"
@@ -54,6 +62,10 @@ Exists in two different versions, POP2 and POP3.
 SMTP::
 Simple Mail Transfer Protocol.
 The communication language used by most MDAs to transfer email messages around the Internet.
+
+SPF::
+Sender Policy Framework.
+A DNS record that provides email validation system designed to prevent spam by detecting email spoofing.
 
 TCP::
 Transport Control Protocol.
