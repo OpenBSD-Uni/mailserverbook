@@ -1,5 +1,9 @@
 == Glossary of Terms
 
+CLI::
+Command-Line Interface.
+A command line interface enables users to type commands in a terminal to interact with an operating system.
+
 DKIM::
 DomainKeys Identified Mail.
 A DNS record designed to help ISPs prevent malicious email senders by validating email from specific domains.
