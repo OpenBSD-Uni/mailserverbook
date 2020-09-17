@@ -1,5 +1,9 @@
 == Glossary of Terms
 
+2FA::
+Two-factor authentication, for example, needing both a password and a numeric code sent you your known phone number, to be able to log in
+to a given system.
+
 CLI::
 Command-Line Interface.
 A command line interface enables users to type commands in a terminal to interact with an operating system.
@@ -26,6 +30,9 @@ a variety of compromised computers around the internet.
 ESMTP::
 Extended SMTP.
 
+GPG::
+Gnu Privacy Guard, an implementation of PGP.
+
 IMAP::
 Internet Mail Access Protocol.
 The communications language used by an MUA to download your mail to your desktop mail reader.
@@ -42,26 +49,36 @@ The back-end of an MTA that actually stores the mail into a file. May be a separ
 MSA::
 https://en.wikipedia.org/wiki/Message_submission_agent[Mail Submission Agent].
 
+MIME::
+xxx
+
 MTA::
 https://en.wikipedia.org/wiki/Message_transfer_agent[Mail (or Message)
 	Transfer (or Transport) Agent].
 The program that sorts out where to send mail and delivers it there, or to another
-program that can get it there.
+program that can get it there. Smtpd is an MTA, as are Sendmail and PostFix.
 
 MUA::
 Mail User Agent.
 The program with which end users compose and send new messages, and read incoming email.
-Examples: Thunderbird, ...
+Examples: Thunderbird, Outlook, Gmail.
 
 MX::
 Mail Exchanger.
 MX is both a generic term for software that exchanges mail, and a type of DNS record
 identifying multiple servers to which you can send email for delivery to a given domain name.
+The mechanism can be used to capture mail on a backup server when a main server is down or overloaded.
+
+PGP::
+xxx
 
 POP::
 Post Office Protocol.
 An older download protocol, less-sophisticated than IMAP.
-Exists in two different versions, POP2 and POP3.
+Existed in two different versions, POP2 and POP3.
+
+PKI::
+Public Key Intrastructure. Mechanisms for distributing public keys.
 
 SMTP::
 Simple Mail Transfer Protocol.

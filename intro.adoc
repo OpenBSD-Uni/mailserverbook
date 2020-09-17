@@ -10,20 +10,28 @@ and OpenBSD as the best email server for the internet
 OpenBSD is an operating system derived from Unix.
 "Open" has been around for two decades, after splitting off from another BSD project.
 BSD in turn is Berkeley Software Distribution or "Berkeley Unix", UC
-Berkeley's expanded (but now discontinued) version of the One True Unix
-developed at AT&T Bell Labs Research Center going all the way back to 1970.
+Berkeley's expanded (but now discontinued) version of the One True Unix.
+Unix was developed at AT&T Bell Labs Research Center; its history is told elsewhere, and goes all the way back to 1970.
 
 === The Internet as a Threat Landscape
 
 The Internet was developed over many years, starting with the ARPAnet which connected
-a few university and military sites. As it was originated in an open environment but
+a few university and military sites. ARPAnet was originated in an open environment but
 with access limited to known researchers,
-security was not a primary consideration.
+so security was not a primary consideration.
 At the same time, desktop computing evolved in a commercial, "Buy Windows for $100" scheme
 which, again, was not as security-focused as it should have been.
 Ever since then we have been playing catch-up on security.
 
-XXX
+Today new threats emerge constantly due to black-hat hackers, "bad actors",
+who either find a thrill in destroying the work of others,
+or who think it fair to get rich by stealing from others.
+There are gazillions of people using the internet, so a thief only needs to 
+pick a small percentage of pockets to be able to steal a decent living.
+Frequently, white-hat security researchers find vulnerabilities in software
+(and, increasingly, in hardware) and black-hats find ways to actually exploit these.
+The problems are compounded by the slow speed at which some software companies release updates,
+and by the fact that many users rarely if ever update their software.
 
 === OpenBSD as the best Server Platform for a hostile Internet
 
@@ -34,7 +42,13 @@ The project focuses on security via several points:
 * design security in from the start
 * integrate security features into the kernel
 
-XXX
+OpenBSD typically releases updates as quickly as possible when new threats emerge,
+and users are encouraged to stay up-to-date.
+There are two branches of releases, stable and current.
+Stable systems stay on a major release, like 6.8, until the next major release comes out, say 6.9.
+The _syspatch_ utility allows them to apply security and reliability updates in between releases.
+Current distributions are made almost daily, and the _sysupgrade_ utility will install the latest
+(this tool is also used to move from one stable release to the next).
 
 === Internet Email
 
