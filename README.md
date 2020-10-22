@@ -19,5 +19,5 @@ You will get best practices from Ian F. Darwin, an OpenBSD developer since 1998.
 
 ## Prerequisites
 
-- OpenBSD release 6.7
+- OpenBSD release 6.8
 - DNS Records : A, PTR, MX, SPF, DMARC and DKIM
