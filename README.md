@@ -8,14 +8,14 @@ You will get best practices from Ian F. Darwin, an OpenBSD developer since 1998.
 - OpenSMTPD as MTA (Mail Transfer Agent)
 - Dovecot MDA (Mail Delivery Agent)
 - Spam fighting mechanism (Spamd/spf walk)
-- Chroot environment
+- DKIM sign outgoing mail
 - System user accounts usage
 - CLI (Command Line Interface) to manage the box
 - Multiple domains hosting
-- DKIM sign outgoing mail
+- Easy monitoring
 - A webmail with Let's Encrypt certificate
 - Easy vacation message setup
-- Maildir E-mail format
+- Chroot environment
 
 ## Prerequisites
 
