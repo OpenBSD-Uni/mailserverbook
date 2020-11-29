@@ -1,0 +1,58 @@
+== Maintaining Your OpenBSD System
+
+=== System Upgrades
+
+Because the malicious actors are constantly finding new ways of breaking software,
+it's important for security reasons to keep your system up to date.
+
+You need to subscribe at least to the openbsd-announce mailing list.
+
+If you run "stable", then when patches are announced, do:
+
+	# syspatch
+
+This will apply all patches that aren't already installed.
+
+Every time a new release is announced (if you run "stable") or every so often 
+(if you run "current"), you should do
+
+	# sysupgrade
+
+This will download a new distribution (a few hundred megabytes) and boot into
+a ramdisk BSD that will install it automatically, 
+updating system files but keeping any local changes in /etc.
+It will reboot again when done.
+
+There are other options, such as keeping the files (so you can upgrade multiple
+machines from one download), switching from stable ("release") to snapshot ("current")
+or vice versa; the _man_ command is your friend.
+
+Now, your installed packages won't be running the latest (and presumably most secure) 
+shared libraries. Worse, there might have been kernel changes that cause your packages
+not to work. Fear not! Just do
+
+	# pkg_add -u
+
+This will automatically update all your installed packages, assuming you only
+used OpenBSD's ports/packages to install them. Follow up with
+
+	# pkg_delete -a
+
+This will remove any packages that are "left behind", that is, no longer
+needed by the currently installed list. This happens for several reasons:
+
+* package dependencies change with new versions;
+* sometimes multiple versions of a package can be installed.
+
+Finally, you can clean up dead files in other parts of the system by running sysclean.
+
+As of 6.8, sysclean is in packages, not in base, so first add it if you didn't
+already do so:
+
+	# pkg_add -v sysclean
+	# sysclean | tee sysclean.out
+
+Note that sysclean doesn't actually clean your system; it simply lists files that
+it thinks are no longer part of the system.
+You can generally safely remove files that it indicates.
+
