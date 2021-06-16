@@ -10,6 +10,8 @@ include::opensmtp.adoc[]
 
 include::dovecot.adoc[]
 
+include::maintain.adoc[]
+
 include::glossary.adoc[]
 
 include::app-cli.adoc[]
